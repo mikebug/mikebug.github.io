@@ -7151,7 +7151,7 @@
 
 				}
 
-				// Null is preferable to undefined since undefined means.... it is undefined
+				// Null is preferable to undefined since undefined means it is undefined
 
 				return null;
 
@@ -30437,7 +30437,7 @@
 
 		triangulateShape: function ( contour, holes ) {
 
-			var vertices = []; // flat array of vertices like [ x0,y0, x1,y1, x2,y2, ... ]
+			var vertices = []; // flat array of vertices like [ x0,y0, x1,y1, x2,y2, . ]
 			var holeIndices = []; // array of hole indices
 			var faces = []; // final array of vertex indices like [ [ a,b,d ], [ b,c,d ] ]
 
@@ -30672,7 +30672,7 @@
 
 				vertices = vertices.reverse();
 
-				// Maybe we should also check if holes are in the opposite direction, just to be safe ...
+				// Maybe we should also check if holes are in the opposite direction, just to be safe .
 
 				for ( h = 0, hl = holes.length; h < hl; h ++ ) {
 
@@ -30948,7 +30948,7 @@
 
 			}
 
-			// Add stepped vertices...
+			// Add stepped vertices.
 			// Including front facing vertices
 
 			var s;
@@ -33847,7 +33847,7 @@
 
 			} else if ( value.toArray !== undefined ) {
 
-				// ...assume THREE.Math-ish
+				// .assume THREE.Math-ish
 
 				do {
 
@@ -35470,7 +35470,7 @@
 
 				} else {
 
-					// ...assume skeletal animation
+					// .assume skeletal animation
 
 					var boneName = '.bones[' + bones[ h ].name + ']';
 
@@ -36166,7 +36166,7 @@
 	/**
 	 * @author mrdoob / http://mrdoob.com/
 	 *
-	 * Abstract Base class to block based textures loader (dds, pvr, ...)
+	 * Abstract Base class to block based textures loader (dds, pvr, .)
 	 *
 	 * Sub classes have to implement the parse() method which will be used in load().
 	 */
@@ -36294,7 +36294,7 @@
 	/**
 	 * @author Nikos M. / https://github.com/foo123/
 	 *
-	 * Abstract Base class to load generic binary textures formats (rgbe, hdr, ...)
+	 * Abstract Base class to load generic binary textures formats (rgbe, hdr, .)
 	 *
 	 * Sub classes have to implement the parse() method which will be used in load().
 	 */
@@ -36358,7 +36358,7 @@
 				if ( texData.mipmaps !== undefined ) {
 
 					texture.mipmaps = texData.mipmaps;
-					texture.minFilter = LinearMipmapLinearFilter; // presumably...
+					texture.minFilter = LinearMipmapLinearFilter; // presumably.
 
 				}
 
@@ -36616,7 +36616,7 @@
 	Object.assign( Curve.prototype, {
 
 		// Virtual base class method to overwrite and implement in subclasses
-		//	- t [0 .. 1]
+		//	- t [0  1]
 
 		getPoint: function ( /* t, optionalTarget */ ) {
 
@@ -36626,7 +36626,7 @@
 		},
 
 		// Get point at relative position in curve according to arc length
-		// - u [0 .. 1]
+		// - u [0  1]
 
 		getPointAt: function ( u, optionalTarget ) {
 
@@ -36724,7 +36724,7 @@
 
 		},
 
-		// Given u ( 0 .. 1 ), get a t to find p. This gives you points which are equidistant
+		// Given u ( 0  1 ), get a t to find p. This gives you points which are equidistant
 
 		getUtoTmapping: function ( u, distance ) {
 
@@ -36932,7 +36932,7 @@
 
 				for ( i = 1; i <= segments; i ++ ) {
 
-					// twist a little...
+					// twist a little.
 					normals[ i ].applyMatrix4( mat.makeRotationAxis( tangents[ i ], theta * i ) );
 					binormals[ i ].crossVectors( tangents[ i ], normals[ i ] );
 
@@ -37023,7 +37023,7 @@
 		var deltaAngle = this.aEndAngle - this.aStartAngle;
 		var samePoints = Math.abs( deltaAngle ) < Number.EPSILON;
 
-		// ensures that deltaAngle is 0 .. 2 PI
+		// ensures that deltaAngle is 0  2 PI
 		while ( deltaAngle < 0 ) { deltaAngle += twoPi; }
 		while ( deltaAngle > twoPi ) { deltaAngle -= twoPi; }
 
@@ -42870,7 +42870,7 @@
 
 			binding.getValue( buffer, originalValueOffset );
 
-			// accu[0..1] := orig -- initially detect changes against the original
+			// accu[01] := orig -- initially detect changes against the original
 			for ( var i = stride, e = originalValueOffset; i !== e; ++ i ) {
 
 				buffer[ i ] = buffer[ originalValueOffset + ( i % stride ) ];
@@ -43416,7 +43416,7 @@
 
 				var objectIndex = parsedPath.objectIndex;
 
-				// special cases were we need to reach deeper into the hierarchy to get the face materials....
+				// special cases were we need to reach deeper into the hierarchy to get the face materials
 				switch ( objectName ) {
 
 					case 'materials':
@@ -44072,7 +44072,7 @@
 		this._startTime = null;
 
 		// scaled local time of the action
-		// gets clamped or wrapped to 0..clip.duration according to loop
+		// gets clamped or wrapped to 0clip.duration according to loop
 		this.time = 0;
 
 		this.timeScale = 1;
