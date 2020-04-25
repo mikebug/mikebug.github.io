@@ -4,7 +4,7 @@
 
   function frame() {
     if (loading == 60) {
-      window.open("/html/home.html", "_self");
+      window.open("/html/index.html", "_self");
     } else {
       loading = loading + 1;
       if (loading == 50) {

@@ -11,7 +11,7 @@ document.getElementById("link").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("../home.html");
+    window.location.replace("../index.html");
   }, 1100);
 });
 document.getElementById("link2").addEventListener("click", function () {
