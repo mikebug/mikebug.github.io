@@ -11,7 +11,7 @@ window.onload = function () {
     const element = document.getElementById("body");
     element.classList.add("animated", "fadeOutDown");
     setTimeout(function () {
-      window.location.replace("/Gallery_2.html");
+      window.location.replace("//gallery-2.html");
     }, 1100);
   });
 }
