@@ -18,7 +18,7 @@ document.getElementById("link3").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("/Gallery.html");
+    window.location.replace("/gallery.html");
   }, 1100);
 });
 document.getElementById("link4").addEventListener("click", function () {
@@ -46,7 +46,7 @@ document.getElementById("link7").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("/Gallery.html");
+    window.location.replace("/gallery.html");
   }, 1100);
 });
 document.getElementById("link8").addEventListener("click", function () {
