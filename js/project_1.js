@@ -7,6 +7,6 @@ document.getElementById("link").addEventListener("click", function () {
     body.style.backgroundColor = "#ffffff";
   }, 100);
   setTimeout(function () {
-    window.location.replace("../html/portfolio.html");
+    window.location.replace("../portfolio.html");
   }, 1100);
 });

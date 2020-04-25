@@ -4,21 +4,21 @@ document.getElementById("link1").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("../html/proj_1.html");
+    window.location.replace("../proj_1.html");
   }, 1100);
 });
 document.getElementById("link").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("../html/home.html");
+    window.location.replace("../home.html");
   }, 1100);
 });
 document.getElementById("link2").addEventListener("click", function () {
   const element = document.getElementById("body");
   element.classList.add("animated", "fadeOutDown");
   setTimeout(function () {
-    window.location.replace("../html/proj_2.html");
+    window.location.replace("../proj_2.html");
   }, 1100);
 });
 
@@ -40,6 +40,6 @@ document.getElementById("link2").addEventListener("click", function () {
     body.style.backgroundColor = "#007856";
   }, 100);
   setTimeout(function () {
-    window.location.replace("../html/proj.html");
+    window.location.replace("../proj.html");
   }, 2200);
 });

@@ -4,7 +4,7 @@ window.onload = function () {
     const element = document.getElementById("body");
     element.classList.add("animated", "fadeOutDown");
     setTimeout(function () {
-      window.location.replace("../html/home.html");
+      window.location.replace("../home.html");
     }, 1100);
   });
 }
