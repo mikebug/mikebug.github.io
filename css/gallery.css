@@ -88,6 +88,16 @@ body {
   padding-right: 2px;
 }
 
+.s {
+  font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #333;
+  width: 200px;
+  margin: auto;
+  padding-right: 2px;
+}
+
 .gallery {
   width: 700px;
   margin: auto;
