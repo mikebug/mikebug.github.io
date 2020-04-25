@@ -79,7 +79,7 @@ background-color: #007856;
   .padding_border {
     margin: 1vh auto;
     border:none;
-    width: 350px;
+    width: 300px;
     padding: 5px;
   }
   .container{
@@ -156,10 +156,30 @@ background-color: #007856;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
+
 .title:hover:after {
   width: 100%;
   left: 0;
 }
+
+.a{  
+  color: #fff;
+  text-align: center;
+  font-size: 26px !important;
+  text-decoration: inherit;
+  text-decoration-color:#007856;
+  padding: 9px;
+}
+
+.b{  
+  color: #fff;
+  text-align: center;
+  font-size: 26px !important;
+  text-decoration: inherit;
+  text-decoration-color:#f08080;
+  padding: 9px;
+}
+
 
 ul {
   margin: 16px auto 16px;

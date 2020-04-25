@@ -25,6 +25,7 @@ time, mark, audio, video {
     vertical-align: baseline;
     font-family: Barlow !important;
 }
+::-webkit-scrollbar { display: none; }
 text{
     font-family: Barlow
 }
