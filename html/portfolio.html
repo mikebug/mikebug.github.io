@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Michael Buglione</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="../js/jquery.js"></script>
+  <link rel="stylesheet" href="../css/protfolio.css" />
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+</head>
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<body id="body" >
+  <div class="padding_border">
+    <h1 id="title" class="title">
+      <a class="name" id="link" href="#">Michael Buglione</a>
+    </h1>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="tiles">
+        <a class="tile alink proj1" id="link1" href="#">
+          <div class="details">
+            <span class="title2 alink">Miracle Ticket</span><span class="info">My Senior Design Porject/Start Up</span>
+          </div>
+        </a><a id="link2" class="tile 2link proj2" href="#">
+          <div class="details">
+            <span class="title2 alink">M&T Bank Currency Design System</span><span class="info">Working on the Front-End Design and Development of the M&T Bank Design System</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="../node_modules/gsap/umd/TweenMax.js"></script>
+  <script src="../js/profolio.js"></script>
+  <script>
+    var cursor = $(".cursor"),
+      follower = $(".cursor-follower");
+
+    var posX = 0,
+      posY = 0;
+
+    var mouseX = 0,
+      mouseY = 0;
+
+    TweenMax.to({}, 0.016, {
+      repeat: -1,
+      onRepeat: function () {
+        posX += (mouseX - posX) / 9;
+        posY += (mouseY - posY) / 9;
+
+        TweenMax.set(follower, {
+          css: {
+            left: posX - 12,
+            top: posY - 12
+          }
+        });
+
+        TweenMax.set(cursor, {
+          css: {
+            left: mouseX,
+            top: mouseY
+          }
+        });
+      }
+    });
+
+    $(document).on("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    // WHITE circle
+    $(".link").on("mouseenter", function () {
+      cursor.addClass("active");
+      follower.addClass("active");
+    });
+    $(".link").on("mouseleave", function () {
+      cursor.removeClass("active");
+      follower.removeClass("active");
+    });
+    $(".name").on("mouseenter", function () {
+      cursor.addClass("active");
+      follower.addClass("active");
+    });
+    $(".name").on("mouseleave", function () {
+      cursor.removeClass("active");
+      follower.removeClass("active");
+    });
+    // WHITE circle
+    $(".alink").on("mouseenter", function () {
+      cursor.addClass("white");
+      follower.addClass("white");
+    });
+    $(".alink").on("mouseleave", function () {
+      cursor.removeClass("white");
+      follower.removeClass("white");
+    });
+    // WHITE circle
+    $(".details").on("mouseenter", function () {
+      cursor.addClass("black");
+      follower.addClass("black");
+    });
+    $(".details").on("mouseleave", function () {
+      cursor.removeClass("black");
+      follower.removeClass("black");
+    });
+    // Green circle
+    $(".tile").on("mouseenter", function () {
+      cursor.addClass("green");
+      follower.addClass("green");
+    });
+    $(".tile").on("mouseleave", function () {
+      cursor.removeClass("green");
+      follower.removeClass("green");
+    });
+  </script>
+</body>
+
+</html>

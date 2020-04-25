@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Gallery</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/gallery.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/Gallery.js"></script>
+  <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css" />
+<script src="" async defer></script>
+<script src="../node_modules/gsap/umd/TweenMax.js"></script>
+</head>
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<body id="body" class="animated fadeInUp">
+
+  <div id="body" class="padding_border">
+    <h1 id="title" class="title">
+      <a class="name" id="about" href="#">Michael Buglione</a>
+    </h1>
+    <h1 class="fav">
+      <p class="name">My Favorites<p>
+    </h1>
+    <div class="gallery">
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/1w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/2w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/3w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/27w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/5w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/6w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/13w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/22w.jpg" alt="" /></div>
+      <div class="img-w"><img loading="lazy" src="../assets/Japan/9w.jpg" alt="" /></div>
+      <!--  <div class="img-w"><img src="../assets/Japan/10.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/11.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/12.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/13.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/14.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/15.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/16.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/17.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/18.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/19.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/20.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/21.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/22.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/23.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/24.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/25.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/26.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/27.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/28.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/29.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/30.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/31.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/32.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/33.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/34.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/35.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/36.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/37.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/38.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/39.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/40.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/41.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/42.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/43.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/44.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/45.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/46.jpg" alt=""/></div>
+            <div class="img-w"><img src="../assets/Japan/47.jpg" alt=""/></div>
+            --->
+    </div>
+    <h1 id="more" class="more">
+      <a class="name" id="link" href="#">See More</a>
+    </h1>
+  </div>
+</body>
+<script>
+  $(function () {
+    $(".img-w").each(function () {
+      $(this).wrap("<div class='img-c'></div>")
+      let imgSrc = $(this).find("img").attr("src");
+      $(this).css('background-image', 'url(' + imgSrc + ')');
+    })
+
+
+    $(".img-c").click(function () {
+      let w = $(this).outerWidth()
+      let h = $(this).outerHeight()
+      let x = $(this).offset().left
+      let y = $(this).offset().top
+
+
+      $(".active").not($(this)).remove()
+      let copy = $(this).clone();
+      copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+      $(".active").css('top', y - 8);
+      $(".active").css('left', x - 8);
+
+      setTimeout(function () {
+        copy.addClass("positioned")
+      }, 0)
+
+    })
+  })
+
+  $(document).on("click", ".img-c.active", function () {
+    let copy = $(this)
+    copy.removeClass("positioned active").addClass("postactive")
+    setTimeout(function () {
+      copy.remove();
+    }, 500)
+  })
+</script>
+<script>
+  var cursor = $(".cursor"),
+      follower = $(".cursor-follower");
+
+  var posX = 0,
+      posY = 0;
+
+  var mouseX = 0,
+      mouseY = 0;
+
+  TweenMax.to({}, 0.016, {
+      repeat: -1,
+      onRepeat: function () {
+          posX += (mouseX - posX) / 9;
+          posY += (mouseY - posY) / 9;
+
+          TweenMax.set(follower, {
+              css: {
+                  left: posX - 12,
+                  top: posY - 12
+              }
+          });
+
+          TweenMax.set(cursor, {
+              css: {
+                  left: mouseX,
+                  top: mouseY
+              }
+          });
+      }
+  });
+
+  $(document).on("mousemove", function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+  });
+  // WHITE circle
+  $(".link").on("mouseenter", function () {
+      cursor.addClass("active");
+      follower.addClass("active");
+  });
+  $(".link").on("mouseleave", function () {
+      cursor.removeClass("active");
+      follower.removeClass("active");
+  });
+  $(".name").on("mouseenter", function () {
+      cursor.addClass("active");
+      follower.addClass("active");
+  });
+  $(".name").on("mouseleave", function () {
+      cursor.removeClass("active");
+      follower.removeClass("active");
+  });
+  // WHITE circle
+  $(".alink").on("mouseenter", function () {
+      cursor.addClass("white");
+      follower.addClass("white");
+  });
+  $(".alink").on("mouseleave", function () {
+      cursor.removeClass("white");
+      follower.removeClass("white");
+  });
+  // WHITE circle
+  $(".img-w").on("mouseenter", function () {
+      cursor.addClass("black");
+      follower.addClass("black");
+  });
+  $(".img-w").on("mouseleave", function () {
+      cursor.removeClass("black");
+      follower.removeClass("black");
+  });
+  // Green circle
+  $(".tile").on("mouseenter", function () {
+      cursor.addClass("green");
+      follower.addClass("green");
+  });
+  $(".tile").on("mouseleave", function () {
+      cursor.removeClass("green");
+      follower.removeClass("green");
+  });
+</script>
+
+
+
+</html>
