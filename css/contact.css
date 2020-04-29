@@ -40,7 +40,7 @@ html {
 
 body {
   width: 100%;
-  padding: 90px;
+  padding: 0 90px 90px 90px;
   margin: 10vh auto;
 }
 
