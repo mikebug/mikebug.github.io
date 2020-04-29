@@ -24,8 +24,14 @@ time, mark, audio, video {
 	font: inherit;
     vertical-align: baseline;
     font-family: Barlow !important;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-::-webkit-scrollbar { display: none; }
+html::-webkit-scrollbar { display: none; }
+body::-webkit-scrollbar {
+    display: none;
+  }
+
 text{
     font-family: Barlow
 }
