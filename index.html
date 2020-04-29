@@ -21,23 +21,23 @@
     </h1>
     <div class="container">
       <div class="tiles">
-        <a class="tile alink" id="link1" href="#"><img src="/assets/Japan/41.jpg" />
+        <a class="tile alink" id="link1" href="#"><img src="/assets/car.jpg" />
           <div class="details">
             <span class="title2 alink">About</span><span class="info">What I'm doing with my life right know and my
               future
               projects.</span>
           </div>
-        </a><a id="link2" class="tile 2link" href="#"><img src="/assets/Japan/35.jpg" />
+        </a><a id="link2" class="tile 2link" href="#"><img src="/assets/plant.png" />
           <div class="details">
             <span class="title2 alink">Portfolio</span><span class="info">Looking for a Front-End
               Developer/Designer?</span>
           </div>
-        </a><a class="tile alink" id="link3" href="#"><img src="/assets/Japan/41.jpg" />
+        </a><a class="tile alink" id="link3" href="#"><img src="/assets/cam.jpg" />
           <div class="details">
             <span class="title2 alink">Gallery</span><span class="info">A photo gallery of my trips, life, and
               projects!</span>
           </div>
-        </a><a class="tile alink" id="link4" href="#"><img src="/assets/Japan/35.jpg" />
+        </a><a class="tile alink" id="link4" href="#"><img src="/assets/lap.png" />
           <div class="details">
             <span class="title2 alink">Contact</span><span class="info">Need to get in touch with me checkout how to get
               in
@@ -78,8 +78,8 @@
     TweenMax.to({}, 0.016, {
       repeat: -1,
       onRepeat: function () {
-        posX += (mouseX - posX) / 9   ;
-        posY += (mouseY - posY) / 9;
+        posX += (mouseX - posX) / 4;
+        posY += (mouseY - posY) / 4;
 
         TweenMax.set(follower, {
           css: {
