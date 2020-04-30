@@ -40,7 +40,7 @@ html {
 
 body {
   width: 100%;
-  padding: 90px;
+  padding: 0 90px 90px 90px;
   margin: 10vh auto;
 }
 
@@ -86,7 +86,7 @@ html {
   padding: 4.8rem;
   text-align: center;
   width: 110rem;
-  margin-top: 10vh;
+  margin-top: 3vw;
   max-width: 100%;
 }
 .soc li {
