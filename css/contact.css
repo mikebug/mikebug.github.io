@@ -412,6 +412,8 @@ html {
 
 .cursor {
   position: fixed;
+  pointer-events:none;
+  border: 1px solid #fff;
   background-color: black;
   width: 10px;
   height: 10px;

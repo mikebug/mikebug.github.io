@@ -173,6 +173,8 @@ body {
 
 .cursor {
   position: fixed;
+  border: 1px solid #fff;
+  pointer-events:none;
   background-color: black;
   width: 10px;
   height: 10px;

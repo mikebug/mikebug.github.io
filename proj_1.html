@@ -80,14 +80,15 @@
 
     .circle {
         position: fixed;
+        border: 1px solid #fff;
         background-color: #000000;
+        pointer-events:none;
         width: 10px;
         height: 10px;
         left: -5px;
         top: -5px;
         border-radius: 100%;
-        z-index: 1;
-        z-index: -10000;
+        z-index: 10;
         transform: scale(1);
     }
 
@@ -99,13 +100,13 @@
         left: -16px;
         top: -16px;
         border-radius: 100%;
-        z-index: 1;
         user-select: none;
         pointer-events: none;
         z-index: 10000;
         transform: scale(1);
     }
 </style>
+
 <script>
     var $circle = $('.circle'),
         $follow = $('.circle-follow');
@@ -142,8 +143,8 @@
     }
 
     $(window).on('mousemove', moveCircle);
-
     $("a").hover(hoverFunc, unhoverFunc);
+
 </script>
 <script src="/js/project_1.js"></script>
 </html>

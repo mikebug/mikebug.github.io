@@ -51,6 +51,7 @@ button {
 .show{
   text-align: center;
   max-width: 15vw;
+  z-index: -1000;
 }
 
 .scalper{
@@ -125,6 +126,8 @@ ol {
 
 .cursor {
   position: fixed;
+  border: 1px solid #333;
+  pointer-events:none;
   background-color: #ffffff;
   width: 10px;
   height: 10px;

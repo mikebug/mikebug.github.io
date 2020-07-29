@@ -265,7 +265,9 @@ footer {
 .circle{
  width: 200px;
  height: 200px;
+ pointer-events:none;
  padding: 0;
+ border: 1px solid #fff;
  background-color: green;
  border-radius: 50%;
  margin: 25px;
@@ -280,8 +282,6 @@ position: inherit;
 top: 50%;
 bottom: 50%;
 }
-/* Reset */
-@import url(//codepen.io/chrisdothtml/pen/ojLzJK.css);
 .tiles {
   font-size: 0;
   text-align: center;
@@ -382,6 +382,8 @@ bottom: 50%;
 }
 .cursor {
   position: fixed;
+  border: 1px solid #fff;
+  pointer-events:none;
   background-color: black;
   width: 10px;
   height: 10px;

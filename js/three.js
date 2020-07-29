@@ -7844,11 +7844,6 @@
 			var a = this.a, b = this.b, c = this.c;
 			var v, w;
 
-			// algorithm thanks to Real-Time Collision Detection by Christer Ericson,
-			// published by Morgan Kaufmann Publishers, (c) 2005 Elsevier Inc.,
-			// under the accompanying license; see chapter 5.1.5 for detailed explanation.
-			// basically, we're distinguishing which of the voronoi regions of the triangle
-			// the point lies in with the minimum amount of redundant computation.
 
 			_vab.subVectors( b, a );
 			_vac.subVectors( c, a );
