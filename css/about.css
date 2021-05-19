@@ -510,8 +510,8 @@ bottom: 50%;
 .cursor {
   position: fixed;
   border: 1px solid #fff;
-  background-color: black;
   pointer-events:none;
+  background-color: black;
   width: 10px;
   height: 10px;
   border-radius: 100%;
@@ -522,7 +522,10 @@ bottom: 50%;
   z-index: 10000;
   transform: scale(1);
 }
-
+.cursor.active {
+  opacity: 1;
+  transform: scale(0);
+}
 .cursor.menu-active {
   opacity: 1;
   transform: scale(0);
@@ -544,7 +547,10 @@ bottom: 50%;
   z-index: 10000;
   transform: translate(2px, 2px);
 }
-
+.cursor-follower.active {
+  opacity: 1;
+  transform: scale(3);
+}
 .cursor-follower.menu-active {
   opacity: 1;
   transform: scale(3);
@@ -586,7 +592,6 @@ bottom: 50%;
   background-image: url("/assets/source.gif");
   border: none;
 }
-
 
 @media only screen and (max-width: 1024px) {
     .cursor{
