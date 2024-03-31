@@ -1,136 +1,134 @@
 <!DOCTYPE html>
 <html class="no-js">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Michael Buglione</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/css/about.css">
-  <link rel="stylesheet" href="/css/animate.min.css" />
-  <script src="/js/jquery.js"></script>
-</head>
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
-<body id="body">
-  <div id="about" class="row">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Michael Buglione</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/animate.min.css" />
+    <script src="/js/jquery.js"></script>
+  </head>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+  <body id="body">
+    <div id="about" class="row">
       <h1 id="title" class="title">
         <a class="name" id="link" href="#">Michael Buglione</a>
       </h1>
-      <img class="Selfie" src="/assets/me.jpeg" alt="Selfie" />
+      <img class="Selfie" src="/assets/me.jpg" alt="Selfie" />
       <h1 class="aboutMe">Who Am I?</h1>
       <h2 class="about">
-      Hi ! I'm Michael Buglione a Full-Stack/Frontend developer based in Buffalo NY. 
-      I mainly work in Full-Stack and Frontend technologies.I graduated with a general
-        engineering degree in software engineering gives me a great
-        understanding of many different sciences and engineering subjects. To
-        round myself out even more, I also have a minor in pre-law and have
-        skills in visual arts, such as drawing, film, and graphic design.
-        Currently, I am working in the TDP program at M&T Bank. Most days I'm either
-        playing my bass, practicing Muay Thai, or working on an art project.
+        Hi ! I'm Michael Buglione a Full-Stack/Frontend developer based in
+        Buffalo NY. I mainly work in Full-Stack and Frontend technologies.I
+        graduated with a general engineering degree in software engineering
+        gives me a great understanding of many different sciences and
+        engineering subjects. To round myself out even more, I also have a minor
+        in pre-law and have skills in visual arts, such as drawing, film, and
+        graphic design. Currently, I am working in the TDP program at M&T Bank.
+        Most days I'm either playing my bass, practicing Muay Thai, or working
+        on an art project.
       </h2>
       <h1 class="aboutMe">My Education</h1>
+      <h2 class="about">Education 2015 - 2019</h2>
+      <h2 class="about">Stevens Insitute Technology</h2>
+      <h2 class="about">Honours</h2>
       <h2 class="about">
-        Education
-        2015 - 2019
-        </h2>
-        <h2 class="about">Stevens Insitute Technology</h2>
-        <h2 class="about">Honours</h2>
-        <h2 class="about">B.E. Software Engineering with a concentration in User Experience</h2>
-        <h2 class="about">Minor in Pre-Law</h2>
-        <h2 class="about">Hoboken, New Jersey</h2>
-      
+        B.E. Software Engineering with a concentration in User Experience
+      </h2>
+      <h2 class="about">Minor in Pre-Law</h2>
+      <h2 class="about">Hoboken, New Jersey</h2>
+
       <h1 class="aboutMe">Work Experience</h1>
-      <h2 class="about"> Varsity Tutors Summer 2018 </h2>
-        <h2 class="about">M&T Bank 2019 - Present</h2>
+      <h2 class="about">Varsity Tutors Summer 2018</h2>
+      <h2 class="about">M&T Bank 2019 - Present</h2>
     </div>
-</body>
+  </body>
 
-<body>
-  <script src="/js/TweenMax.min.js"></script>
-  <script src="/js/about.js"></script>
-  <script>
-    var cursor = $(".cursor"),
-      follower = $(".cursor-follower");
+  <body>
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/about.js"></script>
+    <script>
+      var cursor = $(".cursor"),
+        follower = $(".cursor-follower");
 
-    var posX = 0,
-      posY = 0;
+      var posX = 0,
+        posY = 0;
 
-    var mouseX = 0,
-      mouseY = 0;
+      var mouseX = 0,
+        mouseY = 0;
 
-    TweenMax.to({}, 0.016, {
-      repeat: -1,
-      onRepeat: function () {
-        posX += (mouseX - posX) / 4;
-        posY += (mouseY - posY) / 4;
+      TweenMax.to({}, 0.016, {
+        repeat: -1,
+        onRepeat: function () {
+          posX += (mouseX - posX) / 4;
+          posY += (mouseY - posY) / 4;
 
-        TweenMax.set(follower, {
-          css: {
-            left: posX - 12,
-            top: posY - 12
-          }
-        });
+          TweenMax.set(follower, {
+            css: {
+              left: posX - 12,
+              top: posY - 12,
+            },
+          });
 
-        TweenMax.set(cursor, {
-          css: {
-            left: mouseX,
-            top: mouseY
-          }
-        });
-      }
-    });
+          TweenMax.set(cursor, {
+            css: {
+              left: mouseX,
+              top: mouseY,
+            },
+          });
+        },
+      });
 
-    $(document).on("mousemove", function (e) {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-    // WHITE circle
-    $(".link").on("mouseenter", function () {
-      cursor.addClass("active");
-      follower.addClass("active");
-    });
-    $(".link").on("mouseleave", function () {
-      cursor.removeClass("active");
-      follower.removeClass("active");
-    });
-    $(".name").on("mouseenter", function () {
-      cursor.addClass("active");
-      follower.addClass("active");
-    });
-    $(".name").on("mouseleave", function () {
-      cursor.removeClass("active");
-      follower.removeClass("active");
-    });
-    // WHITE circle
-    $(".alink").on("mouseenter", function () {
-      cursor.addClass("white");
-      follower.addClass("white");
-    });
-    $(".alink").on("mouseleave", function () {
-      cursor.removeClass("white");
-      follower.removeClass("white");
-    });
-    // WHITE circle
-    $(".details").on("mouseenter", function () {
-      cursor.addClass("black");
-      follower.addClass("black");
-    });
-    $(".details").on("mouseleave", function () {
-      cursor.removeClass("black");
-      follower.removeClass("black");
-    });
-    // Green circle
-    $(".tile").on("mouseenter", function () {
-      cursor.addClass("green");
-      follower.addClass("green");
-    });
-    $(".tile").on("mouseleave", function () {
-      cursor.removeClass("green");
-      follower.removeClass("green");
-    });
-  </script>
-</body>
-
+      $(document).on("mousemove", function (e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      // WHITE circle
+      $(".link").on("mouseenter", function () {
+        cursor.addClass("active");
+        follower.addClass("active");
+      });
+      $(".link").on("mouseleave", function () {
+        cursor.removeClass("active");
+        follower.removeClass("active");
+      });
+      $(".name").on("mouseenter", function () {
+        cursor.addClass("active");
+        follower.addClass("active");
+      });
+      $(".name").on("mouseleave", function () {
+        cursor.removeClass("active");
+        follower.removeClass("active");
+      });
+      // WHITE circle
+      $(".alink").on("mouseenter", function () {
+        cursor.addClass("white");
+        follower.addClass("white");
+      });
+      $(".alink").on("mouseleave", function () {
+        cursor.removeClass("white");
+        follower.removeClass("white");
+      });
+      // WHITE circle
+      $(".details").on("mouseenter", function () {
+        cursor.addClass("black");
+        follower.addClass("black");
+      });
+      $(".details").on("mouseleave", function () {
+        cursor.removeClass("black");
+        follower.removeClass("black");
+      });
+      // Green circle
+      $(".tile").on("mouseenter", function () {
+        cursor.addClass("green");
+        follower.addClass("green");
+      });
+      $(".tile").on("mouseleave", function () {
+        cursor.removeClass("green");
+        follower.removeClass("green");
+      });
+    </script>
+  </body>
 </html>
